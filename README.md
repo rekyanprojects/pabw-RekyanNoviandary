@@ -1,22 +1,22 @@
 # PABW · Rekyan Noviandary Widyaningsih · 25523050
 
-This repo holds coursework for Web-Based Application Development, one folder per meeting.
+This repo holds coursework for Web-Based Application Development, one folder per meeting
 
-## Meeting 3 · My movie
+## Meeting 3 · My profile page
 
-My page topic: movies I have watched.
+My page topic: movies I have watched
 
 - Page title: Movies List
 
-- Description: a list of movies I have watched, including their year, genre, and rating
+- Description: a list of movies I have watched, including their title, release year, genre, and rating.
 
-- Navigation links: Movies List, Add Movie, Movies Recommendations
+- Navigation links: List of Movies, Add Movie, Movie Recommendations
 
-- Two main sections: Movies List, Add Movie
+- Two main sections: List of Movies, Add Movie
 
-- Table columns: title, year, genre, rating
+- Table columns: title, release year, genre, rating
 
-- Form columns: movie title, genre, release year, rating
+- Form columns: movie title, genre, rating
 
 - Image: movie.jpg
 
