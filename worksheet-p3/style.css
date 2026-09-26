@@ -48,3 +48,10 @@ nav a:hover {
     background-color: #D4A24C;
     color: #172033;
 }
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
