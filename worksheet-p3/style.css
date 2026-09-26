@@ -118,3 +118,29 @@ figcaption {
     color: #555;
     font-size: 14px;
 }
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #172033;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #BFC3C9;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #D4A24C;
+    border-color: #D4A24C;
+}
