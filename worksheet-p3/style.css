@@ -158,3 +158,15 @@ button {
 button:hover {
     background-color: #B7832F;
 }
+
+footer {
+    background-color: #172033;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
