@@ -20,6 +20,12 @@ My page topic: movies I have watched
 
 - Image: movie.jpg
 
+## Meeting 4 · Page Style
+
+- CSS file: style.css
+
+- CSS styling: colors, layout, table, form, image, navigation, button, and footer
+
 ## Note on AI use
 
-AI helped me with explaining HTML concepts, table structure, and accessibility requirements. I wrote, edited, and customized the final code and content myself.
+AI was used to help me understand HTML and CSS concepts, develop the table structure, and review accessibility requirements. I wrote, edited, and customized the final code and content myself
