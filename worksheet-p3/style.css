@@ -69,3 +69,35 @@ h2 {
     border-left: 5px solid #D4A24C;
     padding-left: 12px;
 }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #172033;
+}
+
+th,
+td {
+    border: 1px solid #D9D9D9;
+    padding: 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #24324A;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFF8E8;
+}
+
+tbody th[scope="row"] {
+    font-weight: normal;
+}
