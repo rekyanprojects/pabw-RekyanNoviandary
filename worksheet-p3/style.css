@@ -63,3 +63,9 @@ section {
     border-radius: 10px;
     border: 1px solid #D9D9D9;
 }
+
+h2 {
+    color: #172033;
+    border-left: 5px solid #D4A24C;
+    padding-left: 12px;
+}
