@@ -144,3 +144,17 @@ select:focus {
     outline: 2px solid #D4A24C;
     border-color: #D4A24C;
 }
+
+button {
+    background-color: #D4A24C;
+    color: #172033;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B7832F;
+}
