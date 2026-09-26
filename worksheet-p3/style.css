@@ -101,3 +101,20 @@ tbody tr:nth-child(even) {
 tbody th[scope="row"] {
     font-weight: normal;
 }
+
+figure {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
