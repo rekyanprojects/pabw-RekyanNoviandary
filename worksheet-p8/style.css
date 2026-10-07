@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F3EF;
+    color: #2B2B2B;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #172033;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 20px;
+    font-size: 36px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    background-color: #24324A;
+    padding: 10px 18px;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #D4A24C;
+    color: #172033;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: white;
+    margin-bottom: 30px;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+}
+
+h2 {
+    color: #172033;
+    border-left: 5px solid #D4A24C;
+    padding-left: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #172033;
+}
+
+th,
+td {
+    border: 1px solid #D9D9D9;
+    padding: 12px;
+    text-align: left;
+}
+
+thead th {
+    background-color: #24324A;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #FFF8E8;
+}
+
+tbody th[scope="row"] {
+    font-weight: normal;
+}
+
+figure {
+    margin: 30px 0 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #555;
+    font-size: 14px;
+}
+
+form p {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #172033;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #BFC3C9;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #D4A24C;
+    border-color: #D4A24C;
+}
+
+button {
+    background-color: #D4A24C;
+    color: #172033;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #B7832F;
+}
+
+footer {
+    background-color: #172033;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}

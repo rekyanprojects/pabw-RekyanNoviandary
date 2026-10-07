@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">
+</head>
+<body>
+    <header>
+    <h1>Movies</h1>
+
+    <nav aria-label="Main navigation">
+        <ul>
+            <li><a href="#movie-list">List of Movies</a></li>
+            <li><a href="#add-movie">Add Movie</a></li>
+            <li><a href="#recommendations">Movie Recommendations</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="movie-list">
+        <h2>List of Movies</h2>
+        <table>
+            <caption>List of movies I've watched</caption>
+
+            <thead>
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Year</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Rating</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Exit</th>
+                    <td>2019</td>
+                    <td>Comedy</td>
+                    <td>9/10</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Midnight Runner</th>
+                    <td>2017</td>
+                    <td>Comedy</td>
+                    <td>9/10</td>
+                </tr>
+
+                <tr>
+                    <th scope="row">The Shadow's Edge</th>
+                    <td>2025</td>
+                    <td>Action</td>
+                    <td>9/10</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <figure>
+            <img src="movie.jpg" alt="A collection of movie posters" width="640" height="600">
+            <figcaption>A list of several movie posters</figcaption>
+        </figure>
+    </section>
+
+    <section id="add-movie">
+        <h2>Add Movie</h2>
+        <form action="/save" method="post">
+
+            <p>
+                <label for="movie-title">Movie Title</label>
+                <input
+                    type="text"
+                    id="movie-title"
+                    name="movie-title"
+                    required>
+            </p>
+
+            <p>
+                <label for="movie-genre">Genre</label>
+                <select
+                    id="movie-genre"
+                    name="movie-genre"
+                    required>
+                    <option value="">Choose a Genre</option>
+                    <option value="action">Action</option>
+                    <option value="horror">Horror</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="drama">Drama</option>
+                    <option value="fantasy">Fantasy</option>
+                    <option value="romance">Romance</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="thriller">Thriller</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="movie-rating">Rating</label>
+                <input
+                    type="number"
+                    id="movie-rating"
+                    name="movie-rating"
+                    min="1"
+                    max="10"
+                    required>
+            </p>
+
+            <button type="submit">Save</button>
+        </form>
+    </section>
+
+    <section id="recommendations">
+        <h2>Movie Recommendations</h2>
+
+        <p>
+            <strong>Exit</strong> is recommended for comedy and action fans.
+        </p>
+
+        <p>
+            <strong>Midnight Runner</strong> is recommended for comedy, action, and thriller fans.
+        </p>
+
+        <p>
+            <strong>The Shadow's Edge</strong> is recommended for action, thriller, and crime fans.
+        </p>
+    </section>
+</main>
+
+<footer>
+    <p>Rekyan Noviandary Widyaningsih · 25523050 · 2026</p>
+</footer>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>
