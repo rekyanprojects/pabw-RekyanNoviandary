@@ -6,7 +6,7 @@ const profil = {
 };
 
 const pageTitle = "Movies";
-const years = 2026;
+const year = 2026;
 const numberOfMovies = 3;
 let pilihanAktif = "semua";
 
@@ -20,7 +20,7 @@ console.log(typeof profil.nama, typeof numberOfMovies);
 document.title = pageTitle;
 document.querySelector("#page-title").textContent = pageTitle;
 document.querySelector("#identity").textContent =
-  `${profil.nama} · ${profil.nim} · ${years}`;
+  `${profil.nama} · ${profil.nim} · ${year}`;
 
 const buatPerkenalan = ({ nama, peran }) => `${nama} — ${peran}`;
 const formatKeahlian = (daftar) => daftar.join(" · ");
@@ -31,9 +31,9 @@ console.log(formatKeahlian(profil.keahlian));
 console.log(formatKeahlian(["Action", "Comedy"]));
 
 const listOfMovie = [
-  { title: "Exit", years: 2019, genre: "Comedy", rating: 9 },
-  { title: "Midnight Runner", years: 2017, genre: "Comedy", rating: 9 },
-  { title: "The Shadow's Edge", years: 2025, genre: "Action", rating: 9 },
+  { title: "Exit", year: 2019, genre: "Comedy", rating: 9 },
+  { title: "Midnight Runner", year: 2017, genre: "Comedy", rating: 9 },
+  { title: "The Shadow's Edge", year: 2025, genre: "Action", rating: 9 },
 ];
 
 console.table(profil.keahlian);
@@ -48,15 +48,18 @@ console.log(exit);
 const justTheTitle = listOfMovie.map((film) => film.title);
 console.log(justTheTitle.length === listOfMovie.length);
 
-const terurut = [...listOfMovie].sort((a, b) => a.years - b.years);
+const terurut = [...listOfMovie].sort((a, b) => a.year - b.year);
 console.log(terurut[0].title, listOfMovie[0].title); // data asli tidak berubah
 
-document.querySelector("#isi-tabel").innerHTML = listOfMovie
+document.querySelector("#table-contents").innerHTML = listOfMovie
   .map((film) => `
     <tr>
       <th scope="row">${film.title}</th>
-      <td>${film.years}</td>
+      <td>${film.year}</td>
       <td>${film.genre}</td>
       <td>${film.rating}/10</td>
     </tr>`)
   .join("");
+
+console.log(profil.nama);
+const nilai = "8"; console.log(Number(nilai) + 1);
