@@ -40,7 +40,7 @@ console.table(profil.keahlian);
 console.table(listOfMovie);
 
 const comedy = listOfMovie.filter((film) => film.genre === "Comedy");
-console.table(komedi);
+console.table(comedy);
 
 const exit = listOfMovie.find((film) => film.title === "Exit");
 console.log(exit);
