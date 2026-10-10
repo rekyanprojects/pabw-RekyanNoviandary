@@ -22,4 +22,10 @@ document.querySelector("#judul-halaman").textContent = judulHalaman;
 document.querySelector("#identitas").textContent =
   `${profil.nama} · ${profil.nim} · ${tahun}`;
 
-  
+const buatPerkenalan = ({ nama, peran }) => `${nama} — ${peran}`;
+const formatKeahlian = (daftar) => daftar.join(" · ");
+
+console.log(buatPerkenalan(profil));
+console.log(buatPerkenalan({ nama: "Rekyan", peran: "mahasiswa" }));
+console.log(formatKeahlian(profil.keahlian));
+console.log(formatKeahlian(["Action", "Comedy"]));
