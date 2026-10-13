@@ -26,6 +26,14 @@ My page topic: movies I have watched
 
 - CSS styling: colors, layout, table, form, image, navigation, button, and footer
 
+## Meeting 8 · Java Script
+
+AI Declaration:
+- AI-assisted: explanations of concepts (const/let, template literals, map/filter/find),
+  examples of code structures, and help with reading and debugging in the Console.
+- I did it myself: choosing topics and populating the page with data, writing and running
+  code in app.js, testing in the Console, filling out the worksheet, and committing to Git.
+
 ## Note on AI use
 
 AI was used to help me understand HTML and CSS concepts, develop the table structure, and review accessibility requirements. I wrote, edited, and customized the final code and content myself

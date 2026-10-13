@@ -60,6 +60,3 @@ document.querySelector("#table-contents").innerHTML = listOfMovie
       <td>${film.rating}/10</td>
     </tr>`)
   .join("");
-
-console.log(profil.nama);
-const nilai = "8"; console.log(Number(nilai) + 1);
