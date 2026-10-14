@@ -17,7 +17,7 @@ function buildRow(movie) {
 }
 
 function renderMovies(list) {
-  movieList.textContent = "";
+  movieList.textContent = "";   // check for answer part F no 4
 
   if (list.length === 0) {
     emptyMessage.hidden = false;
