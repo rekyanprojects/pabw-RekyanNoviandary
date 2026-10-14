@@ -53,23 +53,25 @@
 
     <section id="add-movie">
         <h2>Add Movie</h2>
-        <form action="/save" method="post">
+        <form id="movie-form" action="/save" method="post" novalidate>
+        <p>
+            <label for="movie-title">Movie Title</label>
+            <input type="text" id="movie-title" name="movie-title"
+                    aria-describedby="movie-title-error" required>
+            <span class="error" id="movie-title-error"></span>
+        </p>
 
-            <p>
-                <label for="movie-title">Movie Title</label>
-                <input
-                    type="text"
-                    id="movie-title"
-                    name="movie-title"
-                    required>
-            </p>
+        <p>
+            <label for="movie-year">Movie Year</label>
+            <input type="number" id="movie-year" name="movie-year"
+                    min="1900" max="2026" aria-describedby="movie-year-error" required>
+            <span class="error" id="movie-year-error"></span>
+        </p>
 
-            <p>
-                <label for="movie-genre">Genre</label>
-                <select
-                    id="movie-genre"
-                    name="movie-genre"
-                    required>
+        <p>
+            <label for="movie-genre">Genre</label>
+            <select id="movie-genre" name="movie-genre"
+                    aria-describedby="movie-genre-error" required>
                     <option value="">Choose a Genre</option>
                     <option value="action">Action</option>
                     <option value="horror">Horror</option>
@@ -79,21 +81,18 @@
                     <option value="romance">Romance</option>
                     <option value="sci-fi">Sci-Fi</option>
                     <option value="thriller">Thriller</option>
-                </select>
-            </p>
+            <span class="error" id="movie-genre-error"></span>
+            </select>
+        </p>
 
-            <p>
-                <label for="movie-rating">Rating</label>
-                <input
-                    type="number"
-                    id="movie-rating"
-                    name="movie-rating"
-                    min="1"
-                    max="10"
-                    required>
-            </p>
+        <p>
+            <label for="movie-rating">Rating</label>
+            <input type="number" id="movie-rating" name="movie-rating"
+                    min="1" max="10" aria-describedby="movie-rating-error" required>
+            <span class="error" id="movie-rating-error"></span>
+        </p>
 
-            <button type="submit">Save</button>
+        <button type="submit">Save</button>
         </form>
     </section>
 

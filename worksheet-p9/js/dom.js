@@ -17,11 +17,17 @@ function buildRow(movie) {
 }
 
 function renderMovies(list) {
-  movieList.textContent = "";                 // B.2
+  movieList.textContent = "";
+
+  if (list.length === 0) {
+    emptyMessage.hidden = false;
+    return;
+  }
+  emptyMessage.hidden = true;
+
   const fragment = document.createDocumentFragment();
-  list.forEach((movie) => fragment.append(buildRow(movie)));
+  list.forEach((movie) => fragment.append(buildRow(movie)));  // 3. isi lagi
   movieList.append(fragment);
-  emptyMessage.hidden = list.length > 0;
 }
 
 renderMovies(movies);
@@ -48,3 +54,80 @@ filterRow.addEventListener("click", (event) => {
 });
 
 markActiveButton(document.querySelector('#filter-row [data-genre="all"]'));
+
+const form = document.querySelector("#movie-form");
+const titleInput = document.querySelector("#movie-title");
+const yearInput = document.querySelector("#movie-year");
+const genreSelect = document.querySelector("#movie-genre");
+const ratingInput = document.querySelector("#movie-rating");
+const saveButton = form.querySelector("button[type='submit']");
+
+const rules = [
+  {
+    field: titleInput,
+    check: (v) => v !== "",
+    message: "Enter the movie title.",
+  },
+  {
+    field: yearInput,
+    check: (v) => v !== "" && Number.isInteger(Number(v)) && Number(v) >= 1900 && Number(v) <= 2026,
+    message: "Enter a year from 1900 to 2026.",
+  },
+  {
+    field: genreSelect,
+    check: (v) => v !== "",
+    message: "Choose a genre from the list.",
+  },
+  {
+    field: ratingInput,
+    check: (v) => v !== "" && Number.isInteger(Number(v)) && Number(v) >= 1 && Number(v) <= 10,
+    message: "Enter a whole number from 1 to 10.",
+  },
+];
+
+function validateField(rule) {
+  const error = document.querySelector(`#${rule.field.id}-error`);
+  const valid = rule.check(rule.field.value.trim());
+  error.textContent = valid ? "" : rule.message;
+  if (valid) {
+    rule.field.removeAttribute("aria-invalid");
+  } else {
+    rule.field.setAttribute("aria-invalid", "true");
+  }
+  return valid;
+}
+
+function allValid() {
+  return rules.every((rule) => rule.check(rule.field.value.trim()));
+}
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const results = rules.map(validateField);
+  const valid = results.every(Boolean);
+  saveButton.disabled = !valid;
+
+  if (!valid) {
+    rules.find((rule) => !rule.check(rule.field.value.trim())).field.focus();
+    return;
+  }
+
+  movies.push({
+    title: titleInput.value.trim(),
+    year: Number(yearInput.value),
+    genre: genreSelect.selectedOptions[0].textContent,
+    rating: Number(ratingInput.value),
+  });
+  form.reset();
+  saveButton.disabled = false;
+  renderMovies(movies);
+  markActiveButton(document.querySelector('#filter-row [data-genre="all"]'));
+});
+
+form.addEventListener("input", (event) => {
+  const rule = rules.find((r) => r.field === event.target);
+  if (!rule) return;
+  validateField(rule);
+  saveButton.disabled = !allValid();
+});

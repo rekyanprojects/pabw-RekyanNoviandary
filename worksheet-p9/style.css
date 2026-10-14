@@ -175,3 +175,5 @@ footer p {
   background: #003399;
   color: white;
 }
+
+.error { color: #b00020; font-size: 0.9em; margin-left: 0.5em; }
