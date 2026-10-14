@@ -130,4 +130,4 @@ form.addEventListener("input", (event) => {
   if (!rule) return;
   validateField(rule);
   saveButton.disabled = !allValid();
-});
+}); // part E, check the Event Listener
