@@ -1,4 +1,4 @@
-import { movies } from "./app.js";
+import { listOfMovie as movies } from "./app.js";
 
 const movieList = document.querySelector("#table-contents");
 const emptyMessage = document.querySelector("#empty-message");
@@ -25,3 +25,26 @@ function renderMovies(list) {
 }
 
 renderMovies(movies);
+
+const filterRow = document.querySelector("#filter-row");
+
+function markActiveButton(activeButton) {
+  document.querySelectorAll("#filter-row button").forEach((button) => {
+    button.classList.toggle("active", button === activeButton);
+  });
+}
+
+filterRow.addEventListener("click", (event) => {
+  const button = event.target.closest("button");
+  if (!button) return;
+
+  const genre = button.dataset.genre;
+  const selected = movies.filter(
+    (movie) => genre === "all" || movie.genre.toLowerCase() === genre
+  );
+
+  renderMovies(selected);
+  markActiveButton(button);
+});
+
+markActiveButton(document.querySelector('#filter-row [data-genre="all"]'));

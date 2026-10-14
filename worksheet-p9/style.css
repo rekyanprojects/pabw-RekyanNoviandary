@@ -170,3 +170,8 @@ footer {
 footer p {
     margin: 0;
 }
+
+#filter-row button.active {
+  background: #003399;
+  color: white;
+}

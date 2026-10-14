@@ -30,7 +30,7 @@ console.log(buatPerkenalan({ nama: "Rekyan", peran: "Mahasiswa" }));
 console.log(formatKeahlian(profil.keahlian));
 console.log(formatKeahlian(["Action", "Comedy"]));
 
-const listOfMovie = [
+export const listOfMovie = [
   { title: "Exit", year: 2019, genre: "Comedy", rating: 9 },
   { title: "Midnight Runner", year: 2017, genre: "Comedy", rating: 9 },
   { title: "The Shadow's Edge", year: 2025, genre: "Action", rating: 9 },
@@ -50,16 +50,6 @@ console.log(justTheTitle.length === listOfMovie.length);
 
 const terurut = [...listOfMovie].sort((a, b) => a.year - b.year);
 console.log(terurut[0].title, listOfMovie[0].title); // data asli tidak berubah
-
-document.querySelector("#table-contents").innerHTML = listOfMovie
-  .map((film) => `
-    <tr>
-      <th scope="row">${film.title}</th>
-      <td>${film.year}</td>
-      <td>${film.genre}</td>
-      <td>${film.rating}/10</td>
-    </tr>`)
-  .join("");
 
 console.log(profil.nama);
 const nilai = "8"; console.log(Number(nilai) + 1);
