@@ -56,15 +56,38 @@ console.log(terurut[0].title, listOfMovie[0].title); // data asli tidak berubah
 console.log(profil.nama);
 const nilai = "8"; console.log(Number(nilai) + 1);
 
+const container = document.querySelector('#list');
+const status = document.querySelector('#status');
+
+export function render(list) {
+  container.textContent = '';              // kosongkan dulu
+
+  if (list.length === 0) {                 // kondisi empty
+    status.textContent = 'No news yet.';
+    return;
+  }
+  status.textContent = '';
+
+  list.forEach(function (n) {
+    const card = document.createElement('article');
+    const heading = document.createElement('h3');
+    const text = document.createElement('p');
+    heading.textContent = n.title;         // textContent, bukan innerHTML
+    text.textContent = n.body;
+    card.appendChild(heading);
+    card.appendChild(text);
+    container.appendChild(card);
+  });
+}
+
 async function start() {
-  const status = document.querySelector('#status');
   try {
-    status.textContent = 'Loading...';
+    status.textContent = 'Loading...';     // kondisi loading
     const data = await fetchNews();
-    status.textContent = '';
-    console.log(data);
+    render(data);                          // success atau empty
   } catch (error) {
-    status.textContent = 'Failed to load: ' + error.message;
+    container.textContent = '';
+    status.textContent = 'Failed to load: ' + error.message;   // kondisi failure
   }
 }
 
