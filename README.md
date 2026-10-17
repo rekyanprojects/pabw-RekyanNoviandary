@@ -38,6 +38,10 @@ AI Declaration:
 - AI-assisted (Claude): the dom.js structure (rendering, filtering, form validation) and error    explanations in the Console.
 - I did this myself: HTML and CSS, movie data in app.js, the “year” field, the “Horror” button, testing in the Console, and filling out the worksheet. 
 
+## Meeting 10 · API
+- With AI assistance: explanation of `fetch`, `async`, and `await`; the code structure in `api.js` and rendering in `app.js`; and explanation of errors in the Console.
+- I did this on my own: copied the P9 file, selected an API, ran all the tests (incorrect URL, offline, empty, non-JSON), filled out the worksheet, and committed to Git.
+
 ## Note on AI use
 
 AI was used to help me understand HTML and CSS concepts, develop the table structure, and review accessibility requirements. I wrote, edited, and customized the final code and content myself
