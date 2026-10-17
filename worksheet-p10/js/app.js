@@ -1,3 +1,5 @@
+import { fetchNews } from './api.js';
+
 const profil = {
   nama: "Rekyan Noviandary Widyaningsih",
   nim: "25523050",
@@ -53,3 +55,17 @@ console.log(terurut[0].title, listOfMovie[0].title); // data asli tidak berubah
 
 console.log(profil.nama);
 const nilai = "8"; console.log(Number(nilai) + 1);
+
+async function start() {
+  const status = document.querySelector('#status');
+  try {
+    status.textContent = 'Loading...';
+    const data = await fetchNews();
+    status.textContent = '';
+    console.log(data);
+  } catch (error) {
+    status.textContent = 'Failed to load: ' + error.message;
+  }
+}
+
+start();
